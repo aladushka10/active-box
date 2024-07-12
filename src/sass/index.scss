@@ -6,9 +6,10 @@
   box-sizing: border-box;
 }
 
-@import "./cdn.scss";
-@import "./var.scss";
-@import "./fonts.scss";
+@import "../sass/fonts";
+@import "../sass/cdn";
+@import "../sass/var";
+@import "../sass/features.scss";
 
 .container {
   max-width: 1170px;

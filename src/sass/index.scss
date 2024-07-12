@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+@import "./cdn.scss";
+@import "./var.scss";
+@import "./fonts.scss";
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: auto;
+}

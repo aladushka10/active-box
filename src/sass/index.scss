@@ -6,13 +6,15 @@
   box-sizing: border-box;
 }
 
-@import "../sass/fonts";
-@import "../sass/cdn";
-@import "../sass/var";
-@import "../sass/features.scss";
-
 .container {
   max-width: 1170px;
   padding: 0 15px;
   margin: auto;
+  position: relative;
 }
+
+@import "../sass/fonts";
+@import "../sass/cdn";
+@import "../sass/var";
+@import "../sass/features.scss";
+@import "../sass/gallery.scss";

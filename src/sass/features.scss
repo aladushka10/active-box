@@ -2,6 +2,10 @@
   background-color: #fff;
   padding: 116px 0;
 }
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+}
 .grid-features {
   display: grid;
   grid-template-columns: repeat(3, 360px);

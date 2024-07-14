@@ -1,0 +1,121 @@
+.footer {
+  .footer-up {
+    background-color: #353c65;
+  }
+  .footer-down {
+    background-color: #2c3154;
+  }
+}
+
+.footer-wrap {
+  padding: 71px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-location {
+  width: 370px;
+}
+
+.footer-title {
+  font-family: $font;
+  font-weight: $f-w-h5-title;
+  font-size: $f-size-h5;
+  text-transform: uppercase;
+  color: #fff;
+  width: 170px;
+  text-align: center;
+  margin: 0 auto 29px;
+
+  //   &:nth-child(2n) {
+  //     margin-bottom: 50px;
+  //   }
+}
+.footer-title-social {
+  margin-bottom: 48px;
+}
+
+.footer-location-text {
+  font-family: $font;
+  font-weight: $f-w-h5;
+  font-size: $f-size-h5;
+  color: #fff;
+  width: 370px;
+  text-align: center;
+  margin: auto;
+}
+
+.footer-social {
+  width: 370px;
+
+  .footer-navigation {
+    width: 170px;
+    margin: 0 auto 0;
+
+    .footer-navigation-list {
+      display: flex;
+      justify-content: space-between;
+
+      .footer-navigation-list__item {
+        font-size: 1.125rem;
+        cursor: pointer;
+
+        .footer-navigation-link {
+          width: 39px;
+          height: 39px;
+          border: 1px solid #c6cbcd;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .fa-brands {
+            color: #c6cbcd;
+          }
+
+          &:hover {
+            transition: 0.5s;
+            transform: scale(1.2) rotate(360deg);
+            background-color: rgba(255, 255, 255, 0.8);
+            .fa-facebook-f {
+              color: #3b5998;
+            }
+            .fa-twitter {
+              color: #00acee;
+            }
+            .fa-linkedin {
+              color: #0e76a8;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-about {
+  width: 370px;
+}
+.footer-about-text {
+  font-family: $font;
+  font-size: $f-size-h5;
+  font-weight: $f-w-h5;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-copyright-wrap {
+  padding: 24px 0;
+
+  .copyright-text {
+    font-family: $font;
+    font-size: $f-size-h5;
+    font-weight: $f-w-h5;
+    color: #808080;
+    width: 370px;
+    margin: auto;
+    text-align: center;
+
+    span {
+      color: #fff;
+    }
+  }
+}

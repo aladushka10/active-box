@@ -1,101 +1,105 @@
 .gallery {
 }
-.grid-gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  //   position: absolute;
-  //   top: 0;
-  //    left: -135px;
+.grid-gallery-navigation {
+  .grid-gallery-navigation-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 
-  //   margin-left: -150px;
-  //   margin-right: -150px;
-}
-.grid-gallery-item {
-  width: 100%;
-  height: 340px;
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-}
+    .grid-gallery-item {
+      position: relative;
+      overflow: hidden;
+      padding-top: 100%; //высота элемента будет равна 100% его ширины,  квадратные элементы, независимо от размера экрана
 
-.grid-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 340px;
-  border: 1px solid #fff;
-  overflow: hidden;
-  position: relative;
-  overflow: hidden;
-
-  img {
-    overflow: hidden;
-    display: block;
-    width: 100%;
-  }
-
-  .grid-gallery-item-hover-title {
-    display: none;
-    width: 200px;
-    text-align: center;
-    font-family: $font;
-    font-weight: $f-w-h1-h4;
-    font-size: $f-size-h4;
-    text-transform: uppercase;
-    color: #fff;
-    margin-bottom: 20px;
-    position: absolute;
-    top: 110px;
-    left: 84px;
-    z-index: 3;
-  }
-  .grid-gallery-item-hover-description {
-    display: none;
-    width: 200px;
-    text-align: center;
-    font-family: $font;
-    font-weight: $f-w-h5;
-    font-size: $f-size-h5;
-    color: #fff;
-    position: absolute;
-    top: 190px;
-    left: 84px;
-    z-index: 3;
-  }
-
-  &:hover {
-    .grid-gallery-item-hover-title {
-      display: block;
-    }
-
-    .grid-gallery-item-hover-description {
-      display: block;
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(255, 67, 67, 0.8);
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 2;
-    }
-
-    &:active {
-      &::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(185, 12, 12, 0.8);
+      .grid-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        //   height: 340px;
+        border: 1px solid #fff;
+        overflow: hidden;
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 2;
+        width: 100%;
+        height: 100%;
+
+        .grid-img-link {
+          position: relative;
+          z-index: 2;
+          width: 100%;
+          height: 100%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          .grid-gallery-item-hover-title {
+            display: none;
+            width: 200px;
+            text-align: center;
+            font-family: $font;
+            font-weight: $f-w-h1-h4;
+            font-size: $f-size-h4;
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 20px;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+          }
+          .grid-gallery-item-hover-description {
+            display: none;
+            width: 200px;
+            text-align: center;
+            font-family: $font;
+            font-weight: $f-w-h5;
+            font-size: $f-size-h5;
+            color: #fff;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+          }
+
+          &:hover {
+            .grid-gallery-item-hover-title,
+            .grid-gallery-item-hover-description {
+              display: block;
+            }
+
+            &::after {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(255, 67, 67, 0.8);
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 2;
+            }
+
+            &:active {
+              &::after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(185, 12, 12, 0.8);
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+              }
+            }
+          }
+        }
       }
     }
   }

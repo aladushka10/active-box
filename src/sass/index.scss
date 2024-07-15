@@ -6,18 +6,21 @@
   box-sizing: border-box;
 }
 
-.container {
-  max-width: 1170px;
-  padding: 0 15px;
-  margin: auto;
-}
-
 @import "../sass/fonts";
 @import "../sass/cdn";
 @import "../sass/var";
+@import "../sass/banner_header.scss";
 @import "../sass/features.scss";
 @import "../sass/gallery.scss";
 @import "../sass/team.scss";
 @import "../sass/swiper.scss";
 @import "../sass/download.scss";
 @import "../sass/footer.scss";
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: auto;
+  position: relative;
+  z-index: 3;
+}

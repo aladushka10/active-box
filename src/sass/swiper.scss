@@ -1,47 +1,48 @@
 .swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-  margin-bottom: 45px;
-}
-.swiper-slide-wrap {
-  display: flex;
+  .swiper-wrapper {
+    .swiper-slide {
+      margin-bottom: 45px;
 
-  .swiper-slide-img {
-    width: 50%;
-    overflow: hidden;
-    img {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-  }
-  .swiper-slide-text-wrap {
-    width: 50%;
+      .swiper-slide-wrap {
+        display: flex;
 
-    .swiper-slide-text-wrapper {
-      padding: 113px 0 116px;
-      width: 470px;
-      margin: auto;
+        .swiper-slide-img {
+          width: 50%;
+          overflow: hidden;
+          img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+          }
+        }
+        .swiper-slide-text-wrap {
+          width: 50%;
 
-      .swiper-slide-text {
-        font-family: $font-cardo;
-        font-style: italic;
-        font-size: $f-size-h2;
-        color: #fff;
-        text-transform: capitalize;
-        margin-bottom: 17px;
-      }
-      .swiper-slide-description {
-        font-family: $font;
-        font-weight: $f-w-h2-h3-h6;
-        font-size: $f-size-h6;
-        color: #fff;
-        text-transform: uppercase;
+          .swiper-slide-text-wrapper {
+            padding: 113px 0 116px;
+            width: 470px;
+            margin: auto;
+
+            .swiper-slide-text {
+              font-family: $font-cardo;
+              font-style: italic;
+              font-size: $f-size-h2;
+              color: #fff;
+              text-transform: capitalize;
+              margin-bottom: 17px;
+            }
+            .swiper-slide-description {
+              font-family: $font;
+              font-weight: $f-w-h2-h3-h6;
+              font-size: $f-size-h6;
+              color: #fff;
+              text-transform: uppercase;
+            }
+          }
+        }
       }
     }
   }

@@ -1,0 +1,134 @@
+.banner {
+  background-image: url("../img/banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  //   height: 100vh;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(37, 43, 73, 0.8);
+    position: absolute;
+    z-index: 2;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #babbc5;
+
+    .logo {
+      font-family: $font;
+      font-size: 38px;
+      font-weight: 800;
+      color: #656980;
+      text-transform: uppercase;
+
+      &::after {
+        content: "Box";
+        font-family: $font;
+        font-size: 38px;
+        font-weight: 100;
+        color: #fff;
+        text-transform: uppercase;
+      }
+    }
+    .navigation {
+      width: 670px;
+
+      .navigation-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        //   height: 99px;
+
+        .navigation-list__item {
+          width: 20%;
+          border-bottom: 3px solid transparent;
+          transition: 0.2s;
+
+          &:hover {
+            transition: 0.2s;
+            border-bottom: 3px solid #babbc5;
+          }
+
+          .navigation-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            font-family: $font;
+            font-size: $f-size-h6;
+            font-weight: $f-w-h2-h3-h6;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 40px 0;
+          }
+        }
+      }
+    }
+  }
+
+  .banner-wrap {
+    .banner-text-wrap {
+      padding: 130px 0 120px;
+
+      .banner-title {
+        font-family: $font;
+        font-size: $f-size-h1;
+        font-weight: $f-w-h1-h4;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        width: 1050px;
+        margin: 0 auto 32px;
+      }
+      .banner-description {
+        font-family: $font;
+        font-size: $f-size-h4;
+        font-weight: 400;
+        color: #fff;
+        text-align: center;
+        width: 1050px;
+        margin: 0 auto 80px;
+      }
+      .banner-button {
+        width: 370px;
+        height: 80px;
+        margin: auto;
+        background-color: #ff4343;
+        cursor: pointer;
+
+        .banner-link-download {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 370px;
+          height: 80px;
+          color: #fff;
+          font-family: $font;
+          font-size: $f-size-h4;
+          font-weight: $f-w-h1-h4;
+          text-transform: uppercase;
+          text-align: center;
+        }
+
+        &:hover {
+          background-color: #e71414;
+
+          &:active {
+            background-color: #ff4343;
+          }
+        }
+      }
+    }
+  }
+}

@@ -18,3 +18,10 @@ const swiper = new Swiper(".swiper", {
   //     prevEl: ".swiper-button-prev",
   //   },
 })
+
+const nav = document.querySelector(".navigation")
+const menu = document.querySelector(".fa-bars")
+
+menu.addEventListener("click", function () {
+  nav.classList.toggle("active")
+})

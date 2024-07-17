@@ -31,8 +31,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 370px;
-        height: 80px;
+        width: 100%;
+        height: 100%;
         color: #fff;
         font-family: $font;
         font-size: $f-size-h4;
@@ -46,6 +46,58 @@
 
         &:active {
           background-color: #ff4343;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .download {
+    padding: 78px 0;
+
+    .download-wrap {
+      .download-title {
+        font-size: $f-size-h4;
+        width: 560px;
+        margin: 0 auto 15px;
+      }
+      .download-description {
+        font-size: 0.875rem;
+        width: 550px;
+        margin: 0 auto 44px;
+      }
+      .download-button {
+        width: 314px;
+
+        .link-download {
+          font-size: 1.125rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 574px) {
+  .download {
+    padding: 55px 0 45px;
+
+    .download-wrap {
+      .download-title {
+        font-size: 1.125rem;
+        width: 280px;
+        margin: 0 auto 22px;
+      }
+      .download-description {
+        font-size: 0.8125rem;
+        width: 280px;
+        margin: 0 auto 11px;
+      }
+      .download-button {
+        width: 279px;
+
+        .link-download {
+          font-size: 1.125rem;
         }
       }
     }

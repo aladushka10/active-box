@@ -1,23 +1,22 @@
-.banner {
+.header {
   background-image: url("../img/banner.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
-  z-index: 1;
-  //   height: 100vh;
+  height: 100vh;
 
   &::before {
     content: "";
     display: inline-block;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(37, 43, 73, 0.8);
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(37, 43, 73, 0.8);
     position: absolute;
     z-index: 2;
   }
 
-  .header {
+  .header-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,6 +55,12 @@
           &:hover {
             transition: 0.2s;
             border-bottom: 3px solid #babbc5;
+            &:active {
+              border-bottom: 3px solid #e71414;
+              .navigation-link {
+                color: #e71414;
+              }
+            }
           }
 
           .navigation-link {
@@ -75,6 +80,23 @@
         }
       }
     }
+
+    .burger-menu {
+      display: none;
+      width: 55px;
+      height: 55px;
+
+      .fa-bars {
+        color: #fff;
+        font-size: 1.75rem;
+      }
+
+      .fa-xmark {
+        // display: none;
+        color: #fff;
+        font-size: 1.8rem;
+      }
+    }
   }
 
   .banner-wrap {
@@ -88,7 +110,7 @@
         color: #fff;
         text-transform: uppercase;
         text-align: center;
-        width: 1050px;
+        width: 1020px;
         margin: 0 auto 32px;
       }
       .banner-description {
@@ -97,7 +119,7 @@
         font-weight: 400;
         color: #fff;
         text-align: center;
-        width: 1050px;
+        width: 1020px;
         margin: 0 auto 80px;
       }
       .banner-button {
@@ -106,13 +128,30 @@
         margin: auto;
         background-color: #ff4343;
         cursor: pointer;
+        animation: pulse-button 1s infinite;
+
+        @keyframes pulse-button {
+          0% {
+            transform: scale(0.9);
+          }
+          50% {
+            transform: scale(1.1);
+          }
+          100% {
+            transform: scale(0.9);
+          }
+        }
+
+        &:active {
+          box-shadow: 4px 4px 30px #ff4343;
+        }
 
         .banner-link-download {
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 370px;
-          height: 80px;
+          width: 100%;
+          height: 100%;
           color: #fff;
           font-family: $font;
           font-size: $f-size-h4;
@@ -126,6 +165,186 @@
 
           &:active {
             background-color: #ff4343;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1045px) {
+  .header {
+    .header-wrap {
+      .navigation {
+        width: 600px;
+      }
+    }
+    .banner-wrap {
+      .banner-text-wrap {
+        .banner-title {
+          font-size: 3.5rem;
+          width: 900px;
+          margin-bottom: 45px;
+        }
+        .banner-description {
+          font-size: 1.5rem;
+          width: 900px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    .header-wrap {
+      .navigation {
+        width: 566px;
+        .navigation-list {
+          .navigation-list__item {
+            .navigation-link {
+              font-size: 0.75rem;
+            }
+          }
+        }
+      }
+    }
+    .banner-wrap {
+      .banner-text-wrap {
+        padding: 157px 0 126px;
+        .banner-title {
+          font-size: 3rem;
+          width: 800px;
+          margin-bottom: 61px;
+        }
+        .banner-description {
+          font-size: 1.125rem;
+          width: 800px;
+          margin-bottom: 89px;
+        }
+
+        .banner-button {
+          width: 314px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 870px) {
+  .header {
+    .header-wrap {
+      .navigation {
+        width: 450px;
+      }
+    }
+
+    .banner-wrap {
+      .banner-text-wrap {
+        .banner-title {
+          max-width: 600px;
+        }
+        .banner-description {
+          max-width: 600px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 720px) {
+  .header {
+    z-index: 8;
+    position: relative;
+
+    .header-wrap {
+      margin: 0;
+      border: none;
+      z-index: 6;
+      .logo {
+        font-size: 1.25rem;
+        padding: 16px 0;
+
+        &::after {
+          font-size: 1.25rem;
+        }
+      }
+      .navigation {
+        z-index: 100;
+        position: absolute;
+        top: -1000;
+        left: 0;
+        background-color: rgba(37, 43, 73, 0.8);
+        .navigation-list {
+          margin-top: 28px;
+          z-index: 100;
+          position: absolute;
+          flex-direction: column;
+          width: 100%;
+
+          .navigation-list__item {
+            width: 90%;
+
+            .navigation-link {
+              justify-content: flex-start;
+              padding: 25px 0;
+            }
+          }
+        }
+      }
+      .navigation.active {
+        position: absolute;
+        z-index: 1000;
+        width: 100vw;
+        height: 92vh;
+        top: 56;
+        left: 0;
+        background-color: rgba(37, 43, 73, 0.95);
+        box-shadow: -3px -20px 40px rgba(37, 43, 73, 0.9);
+      }
+      .burger-menu {
+        display: block;
+        position: relative;
+        z-index: 4;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .fa-bars {
+        }
+      }
+    }
+
+    .banner-wrap {
+      .banner-text-wrap {
+        padding: 50px 0;
+
+        .banner-title {
+          font-size: 2.25rem;
+          width: 280px;
+        }
+        .banner-description {
+          font-size: 0.875rem;
+          width: 100%;
+          margin: 0 auto 50px;
+        }
+        .banner-button {
+          width: 280px;
+          height: 60px;
+
+          @keyframes pulse-button {
+            0% {
+              transform: scale(0.9);
+            }
+            50% {
+              transform: scale(1);
+            }
+            100% {
+              transform: scale(0.9);
+            }
+          }
+
+          .banner-link-download {
+            font-size: 1.5rem;
           }
         }
       }

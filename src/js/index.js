@@ -20,8 +20,15 @@ const swiper = new Swiper(".swiper", {
 })
 
 const nav = document.querySelector(".navigation")
-const menu = document.querySelector(".fa-bars")
+const menuIcon = document.querySelector(".burger-menu i")
 
-menu.addEventListener("click", function () {
+menuIcon.addEventListener("click", function () {
   nav.classList.toggle("active")
+  if (nav.classList.contains("active")) {
+    menuIcon.classList.remove("fa-bars")
+    menuIcon.classList.add("fa-xmark")
+  } else {
+    menuIcon.classList.remove("fa-xmark")
+    menuIcon.classList.add("fa-bars")
+  }
 })

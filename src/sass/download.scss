@@ -27,6 +27,10 @@
       background-color: #ff4343;
       cursor: pointer;
 
+      &:active {
+        box-shadow: 4px 4px 30px #ff4343;
+      }
+
       .link-download {
         display: flex;
         justify-content: center;
